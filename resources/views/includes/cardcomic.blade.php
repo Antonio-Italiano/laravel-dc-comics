@@ -15,7 +15,7 @@
 
         </div>
         <div class="col-4">
-            <img src="" alt="publicità">
+            <img src="" alt="pubblicità">
         </div>
     </div>
     
