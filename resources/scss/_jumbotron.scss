@@ -1,0 +1,21 @@
+#jumbotron {
+    height: 42vh;
+    background-image: url(../images/jumbotron.jpg);
+    background-size: cover;
+
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    label {
+        position: absolute;
+        left: 0;
+        bottom: -17px;
+        padding: 8px 30px;
+        background-color: #0282F9;
+        color: #fff;
+    }
+}

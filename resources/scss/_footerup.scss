@@ -1,0 +1,47 @@
+#footer-up {
+    height: calc(50vh/3 * 3);
+    background-image: url(../images/footer-bg.jpg);
+
+    .row {
+        height: 100%;
+        display: flex;
+        padding-bottom: 15px 0;
+
+        .col {
+            width: 50%;
+            height: 100%;
+            display: flex;
+
+            figure {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    height: 140%;
+                }
+            }
+
+            .col-3 {
+                width: calc(100% / 3);
+                height: 100%;
+
+                h3 {
+                    margin: 13px 0;
+                    color: #fff;
+                }
+
+                li {
+                    font-size: 13px;
+
+                    a {
+                        color: #6E837C;
+                    }
+                }
+
+            }
+        }
+    }
+}

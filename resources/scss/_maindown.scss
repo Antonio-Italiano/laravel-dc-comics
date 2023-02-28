@@ -1,0 +1,40 @@
+#main-down {
+    height: calc(100vh/6 + 40px);
+    background-color: #0282F9;
+
+    .row {
+        display: flex;
+        height: 100%;
+
+        .col-5 {
+            width: calc(100%/5);
+            height: 100%;
+
+            figure {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    height: 30%;
+                    width: 80%;
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        max-height: 100%;
+                    }
+
+                    p {
+                        color: #fff;
+                        margin-left: 10px;
+                        font-size: 12px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
