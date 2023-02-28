@@ -34,6 +34,11 @@ class PageController extends Controller
         return view('games');
     }
 
+    public function collectibles()
+    {
+        return view('collectibles');
+    }
+
     public function videos()
     {
         return view('videos');

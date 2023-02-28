@@ -6,8 +6,6 @@
 
     @include('includes.jumbotron')
 
-    @include('includes.mainup')
-
-    @include('includes.maindown')
+    @include('includes.cardcomic')
 
 @endsection

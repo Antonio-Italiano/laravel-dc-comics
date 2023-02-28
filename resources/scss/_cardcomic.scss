@@ -1,0 +1,34 @@
+#card-comic {
+    height: 45vh;
+    max-width: 60vw;
+    background-color: #fff;
+    position: relative;
+    margin: 0 auto;
+
+    .col-8,
+    .col-4 {
+        height: 100%;
+
+    }
+
+    .info-red {
+        background-color: #55BA59;
+        height: 40px;
+
+        p {
+            margin: 0;
+        }
+    }
+}
+
+#card-comic-dw {
+    height: 50vh;
+    background-color: #F6F6F6;
+    position: relative;
+
+    .row {
+        max-width: 60vw;
+        margin: 0 auto;
+
+    }
+}

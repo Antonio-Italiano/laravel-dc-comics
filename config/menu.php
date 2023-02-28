@@ -1,7 +1,7 @@
 <?php
 return [
     ['text' => 'CHARACTERS', 'route_name' => 'characters'],
-    ['text' => 'COMICS', 'route_name' => 'comics'],
+    ['text' => 'COMICS', 'route_name' => 'comics.index'],
     ['text' => 'MOVIE', 'route_name' => 'movies'],
     ['text' => 'TV', 'route_name' => 'tv'],
     ['text' => 'GAMES', 'route_name' => 'games'],

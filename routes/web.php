@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComicController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -45,8 +46,13 @@ Route::get('/news', [PageController::class, 'news'])->name('news');
 // for shop
 Route::get('/shop', [PageController::class, 'shop'])->name('shop');
 
-// for comics details
-Route::get('/comics/{index}', function ($index) {
-    $comics = config('comics');
-    return view('comic', ['comic' => $comics[$index]]);
- })->name('comic');
+
+// routes for comics details
+Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
+Route::get('/comics/{id}', [ComicController::class, 'show'])->name('comics.show');
+
+
+// Route::get('/comics/{index}', function ($index) {
+//     $comics = config('comics');
+//     return view('comic', ['comic' => $comics[$index]]);
+//  })->name('comic');

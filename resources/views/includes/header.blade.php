@@ -22,7 +22,7 @@
                     <nav>
                         <ul>
                             @foreach ($links as $link)                                
-                            <li><a href="{{ route($link['route_name']) }}"><h6 class="mb-0">{{ $link['text'] }}</h6></a></li>
+                            <li><a class="{{ request()->routeIs($link['route_name']) ? 'cliched' : '' }}" href="{{ route($link['route_name']) }}">{{ $link['text'] }}</a></li>
                             @endforeach
                         </ul>
                     </nav>

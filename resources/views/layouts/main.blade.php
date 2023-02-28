@@ -14,11 +14,7 @@
 <body>
     @include('includes.header')
 
-    @include('includes.jumbotron')
-
-    @include('includes.mainup')
-
-    @include('includes.maindown')
+    @yield('content')
     
     @include('includes.footerup')
 

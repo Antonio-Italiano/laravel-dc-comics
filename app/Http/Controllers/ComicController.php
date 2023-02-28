@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comic;
 use Illuminate\Http\Request;
 
 class ComicController extends Controller
@@ -11,7 +12,10 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $comics = config('comics');
+        $links = config('links');
+        $linksfooter = config('linksfooter');
+        return view('comics', compact('comics', 'links', 'linksfooter'));
     }
 
     /**
@@ -35,7 +39,11 @@ class ComicController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        $links = config('links');
+        $linksfooter = config('linksfooter');
+
+        return view('comics.show', compact('comic', 'links', 'linksfooter'));
     }
 
     /**
