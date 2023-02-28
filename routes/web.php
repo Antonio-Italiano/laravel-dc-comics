@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,39 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// for characters
+Route::get('/characters', [PageController::class, 'characters'])->name('characters');
+
+// for comics
+Route::get('/', [PageController::class, 'comics'])->name('comics');
+
+
+// for movies
+Route::get('/movies', [PageController::class, 'movies'])->name('movies');
+
+// for tv
+Route::get('/tv', [PageController::class, 'tv'])->name('tv');
+
+// for games
+Route::get('/games', [PageController::class, 'games'])->name('games');
+
+// for collectibles
+Route::get('/collectibles', [PageController::class, 'collectibles'])->name('collectibles');
+
+// for videos
+Route::get('/videos', [PageController::class, 'videos'])->name('videos');
+
+// for fans
+Route::get('/fans', [PageController::class, 'fans'])->name('fans');
+
+// for news
+Route::get('/news', [PageController::class, 'news'])->name('news');
+
+// for shop
+Route::get('/shop', [PageController::class, 'shop'])->name('shop');
+
+// for comics details
+Route::get('/comics/{index}', function ($index) {
+    $comics = config('comics');
+    return view('comic', ['comic' => $comics[$index]]);
+ })->name('comic');
