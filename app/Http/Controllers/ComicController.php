@@ -47,10 +47,8 @@ class ComicController extends Controller
     public function show(string $id)
     {
         $comic = Comic::findOrFail($id);
-        $links = config('links');
-        $linksfooter = config('linksfooter');
 
-        return view('comics.show', compact('comic', 'links', 'linksfooter'));
+        return view('comics.show', compact('comic'));
     }
 
     /**
