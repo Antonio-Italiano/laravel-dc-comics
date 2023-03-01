@@ -1,6 +1,8 @@
 #main-up {
-    height: 70vh;
+    min-height: 20vh;
+    padding-bottom: 290px;
     background-color: #1C1C1C;
+    position: relative;
 
     .row {
         flex-wrap: wrap;

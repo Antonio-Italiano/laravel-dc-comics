@@ -1,5 +1,5 @@
 #card-comic {
-    height: 45vh;
+    min-height: 45vh;
     max-width: 60vw;
     background-color: #fff;
     position: relative;
@@ -22,7 +22,7 @@
 }
 
 #card-comic-dw {
-    height: 50vh;
+    min-height: 20vh;
     background-color: #F6F6F6;
     position: relative;
 
