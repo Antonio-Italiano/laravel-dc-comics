@@ -16,8 +16,6 @@
 
     @yield('content')
     
-    @include('includes.footerup')
-
     @include('includes.footerdown')
 </body>
 </html>

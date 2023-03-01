@@ -10,12 +10,11 @@ class ComicController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $comics = config('comics');
-        $links = config('links');
-        $linksfooter = config('linksfooter');
-        return view('comics', compact('comics', 'links', 'linksfooter'));
+        $query = Comic::query();
+        $comics = $query->get();
+        return view('comics', compact('comics'));
     }
 
     /**
@@ -23,7 +22,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -31,7 +30,15 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        
+        $comic = new Comic();
+
+        $comic->fill($data);
+
+        $comic->save();
+
+        return to_route('comics.show', $comic->id);
     }
 
     /**

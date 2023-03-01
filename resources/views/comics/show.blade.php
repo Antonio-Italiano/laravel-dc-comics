@@ -7,5 +7,7 @@
     @include('includes.jumbotron')
 
     @include('includes.cardcomic')
+    
+    @include('includes.footerup')
 
 @endsection

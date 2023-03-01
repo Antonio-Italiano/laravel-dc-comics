@@ -1,3 +1,8 @@
+@php
+    $linksfooter = config('linksfooter');
+@endphp
+    
+
 <section id="footer-down">
     <div class="row container-custom">
         <div class="col">

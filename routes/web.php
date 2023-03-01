@@ -47,12 +47,14 @@ Route::get('/news', [PageController::class, 'news'])->name('news');
 Route::get('/shop', [PageController::class, 'shop'])->name('shop');
 
 
-// routes for comics details
+// routes for comics create
+Route::get('/comics/create', [ComicController::class, 'create'])->name('comics.create');
+
+// routes for list comics
 Route::get('/comics', [ComicController::class, 'index'])->name('comics.index');
+
+// routes for comics details
 Route::get('/comics/{id}', [ComicController::class, 'show'])->name('comics.show');
 
-
-// Route::get('/comics/{index}', function ($index) {
-//     $comics = config('comics');
-//     return view('comic', ['comic' => $comics[$index]]);
-//  })->name('comic');
+// routes for save the data to DB
+Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');

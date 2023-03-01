@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\Comic;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -10,13 +12,11 @@ class PageController extends Controller
         return view('characters');
     }
 
-    public function comics()
+    public function comics(Request $request)
     {
-        $comics = config('comics');
-        $links = config('links');
-        $linksfooter = config('linksfooter');
-        
-        return view('comics', compact('comics', 'links', 'linksfooter'));
+        $query = Comic::query();
+        $comics = $query->get();
+        return view('comics', compact('comics'));
     }
 
     public function movies()

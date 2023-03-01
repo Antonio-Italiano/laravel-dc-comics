@@ -8,4 +8,6 @@
 
     @include('includes.cardcomic')
 
+    @include('includes.footerup')
+
 @endsection

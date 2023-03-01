@@ -1,3 +1,7 @@
+@php
+    $links = config('links');
+@endphp
+
 <section id="main-down">
     <div class="row container-custom">
         @foreach ($links as $link)

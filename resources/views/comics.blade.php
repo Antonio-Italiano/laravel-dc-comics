@@ -10,4 +10,6 @@
 
     @include('includes.maindown')
 
+    @include('includes.footerup')
+
 @endsection

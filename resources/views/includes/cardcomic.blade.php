@@ -15,7 +15,9 @@
 
         </div>
         <div class="col-4">
-            <img src="" alt="pubblicità">
+            <a href="#">
+                <img src="{{ Vite::asset('resources/images/adv.jpg') }}" alt="pubblicità">
+            </a>
         </div>
     </div>
     
