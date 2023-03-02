@@ -50,14 +50,22 @@
                 <div class="col-8 border-top border-bottom border-primary">{{$comic->sale_date}}</div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-6">
+        <div class="col-12">
 
+            <div class="row">
+                <div class="col-6">
+                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="h-100 d-flex align-items-center">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">elimina</button>
+                    </form>
+                </div>
+                <div class="col-6 text-end box-btn">                
+                    <a class="btn btn-secondary my-3" href="{{ route('comics.index') }}">ritorna</a>
+                    <a class="btn btn-primary my-3" href="{{ route('comics.edit', $comic->id) }}">modifica</a>
+                </div>
             </div>
-            <div class="col-6 text-end box-btn">
-                <a class="btn btn-secondary my-3" href="/">ritorna</a>
-                <a class="btn btn-primary my-3" href="{{ route('comics.edit', $comic->id) }}">modifica</a>
-            </div>
+            
         </div>
     </div>
     
