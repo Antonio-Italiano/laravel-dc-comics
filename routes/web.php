@@ -58,3 +58,9 @@ Route::get('/comics/{id}', [ComicController::class, 'show'])->name('comics.show'
 
 // routes for save the data to DB
 Route::post('/comics', [ComicController::class, 'store'])->name('comics.store');
+
+// routes for modify comic
+Route::get('/comics/{comic}/edit', [ComicController::class, 'edit'])->name('comics.edit');
+
+// routes for update comic
+Route::put('/comics/{comic}', [ComicController::class, 'update'])->name('comics.update');
